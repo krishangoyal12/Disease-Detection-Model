@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+
+# Datasets and local artifacts
+disease data/
+uploads/
+
+# Large training artifacts not needed for deploy
+*.hdf5
+*.weights.h5
+
+# Jupyter
+.ipynb_checkpoints/
