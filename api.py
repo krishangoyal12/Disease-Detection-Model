@@ -120,6 +120,17 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/")
+def root():
+    return {
+        "service": "crop-disease-detection-api",
+        "status": "ok",
+        "docs": "/docs",
+        "health": "/health",
+        "predict": "/predict",
+    }
+
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     if not file.filename:
